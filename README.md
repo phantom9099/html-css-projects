@@ -11,7 +11,6 @@
 | **Create SEO**   | Сайт SEO-компании | [Открыть](./create-seo/index.html) |
 | **Createx SEO**  | Сайт агентства | [Открыть](./createx-seo/index.html) |
 | **Dananz**       | Интерьерный сайт | [Открыть](./dananz/index.html) |
-| **Fitnes**       | Фитнес лэндинг | [Открыть](./fitnes/index.html) |
 | **Mntn**         | Туристический сайт | [Открыть](./mntn/index.html) |
 
 ---
@@ -21,4 +20,4 @@
 Склонируй проект и открой любую папку:
 
 ```bash
-git clone https://github.com/ТВОЙ_ЮЗЕРНЕЙМ/html-css-projects.git
+git clone https://github.com/phantom9099/html-css-projects.git
