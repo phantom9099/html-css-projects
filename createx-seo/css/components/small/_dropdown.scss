@@ -1,0 +1,51 @@
+.dropdown {
+   position: absolute;
+   background-color: $ebony-gray;
+   padding: 20px 40px;
+   margin: 10px 0 0 -40px;
+   will-change: max-height;
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(20px);
+   transition: opacity .3s ease-in-out, visibility .3s ease-in-out, transform .3s ease-in-out, max-height .3s ease-in-out, will-change .3s ease-in-out;
+
+   &_visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0);
+   }
+
+   @media (max-width: 768px) {
+      position: static;
+      padding: 0 0 0 60px;
+      background-color: transparent;
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0);
+   }
+
+   &__list {
+      
+   }
+
+   &__item {
+      white-space: nowrap;
+      margin: 0 0 10px 0;
+   }
+
+   &__link {
+      font-weight: 700;
+      font-size: 16px;
+   }
+
+   &__link {
+      font-weight: 700;
+      font-size: 16px;
+      color: $dusty-gray;
+      transition: color .3s ease-in-out;
+
+      &:hover {
+         color: $white;
+      }
+   }   
+}

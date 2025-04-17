@@ -1,0 +1,21 @@
+/* FireFox */
+
+// html, body {
+//    scrollbar-color: $cornflower-blue white;  /* scroll / background */
+//    scrollbar-width: 10px;
+// }
+
+
+::-webkit-scrollbar {
+   width: 8px;
+   background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: $cornflower-blue;
+   border-radius: 100px;
+
+   &:hover {
+      background-color: rgba(119, 114, 241, 60%);
+   }
+}

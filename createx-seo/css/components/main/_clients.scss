@@ -1,0 +1,33 @@
+.clients {
+   padding: 80px 0;
+
+   @media (max-width: 768px) {
+      padding: 40px 0;
+   }
+
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(6, 126px);
+      justify-content: space-between;
+      gap: 20px;
+
+      @media (max-width: 900px) {
+         grid-template-columns: repeat(3, 126px);
+         justify-content: center;
+      }
+
+      @media (max-width: 500px) {
+         grid-template-columns: repeat(2, 126px);
+      }
+
+      @media (max-width: 425px) {
+         justify-content: center;
+      }
+   }
+
+   &__item {
+      &-img {
+         width: 100%;
+      }
+   }
+}

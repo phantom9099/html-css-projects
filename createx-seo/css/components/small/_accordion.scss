@@ -1,0 +1,65 @@
+.accordion-content {
+   max-width: 600px;
+}
+
+.accordion {
+	--accordion-time: .3s;
+   $padding-left: 38px;
+
+   &.active {
+      .accordion__control {
+         padding-top: 10px;
+         padding-bottom: 10px;
+
+         &::before {
+            transform: translateY(-50%) rotate(90deg) scale(0);
+         }
+      }
+   }
+
+   &__control {
+      position: relative;
+      text-align: left;
+      width: 100%; 
+      cursor: pointer;
+      background-color: transparent;      
+      padding: 20px 20px 20px $padding-left;
+      transition: padding .3s ease-in-out;
+
+      &::before,
+      &::after {
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 0;
+         transform: translateY(-50%);
+         background-color: $cornflower-blue;
+         width: 18px;
+         height: 2px;
+         transition: transform .3s ease-in-out;
+      }
+
+      &::before {
+         transform: translateY(-50%) rotate(90deg);
+      }
+
+      &::after {
+         
+      }
+   }
+
+   &__content {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      will-change: max-height;
+      transition: opacity var(--accordion-time) ease-in-out, max-height var(--accordion-time) ease-in-out, will-change var(--accordion-time) ease-in-out, padding var(--accordion-time) ease-in-out;
+      box-sizing: content-box;
+      background-color: transparent;
+
+      &_open {
+         opacity: 1;
+	      padding: 12px 10px 22px $padding-left;
+      }
+   }
+}

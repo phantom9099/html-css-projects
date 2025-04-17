@@ -1,0 +1,56 @@
+.swiper {  
+   margin: -20px;
+   padding: 20px !important;
+
+   &-slide {
+      opacity: 0;
+      transition: opacity .3s ease-in-out !important;
+
+      &-visible {
+         opacity: 1;
+      }
+   }
+
+   &-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      width: 48px;
+      height: 48px;
+      transition: background-color .3s ease-in-out;
+
+      &:hover {
+         background-color: $cornflower-blue;
+
+         .swiper-btn__img {
+            fill: $white;
+         }
+      }
+
+      &__img {
+         width: 18px;
+         height: 12px;
+         fill: $ebony-gray;
+         object-fit: cover;
+         transition: fill .3s ease-in-out;
+      }
+
+      &-prev {
+         &__img {
+            transform: rotate(180deg);
+         }
+      }
+   }
+
+   &-pagination {
+      &-bullet {
+         background-color: $dusty-gray;
+
+         &-active {
+            background-color: $cornflower-blue;
+            transform: scale(1.4);
+         }
+      }
+   }
+}

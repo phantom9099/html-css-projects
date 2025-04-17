@@ -1,0 +1,97 @@
+.figures {
+   padding: 80px 0;
+
+   @media (max-width: 768px) {
+      padding: 40px 0;
+   }
+
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 148px);
+      gap: 48px;
+      justify-content: center;
+
+      @media (max-width: 768px) {
+         grid-template-columns: repeat(2, 148px);
+         gap: 40px 20px;
+      }
+
+      @media (max-width: 320px) {
+         grid-template-columns: repeat(1, 148px);
+      }
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      @media (max-width: 768px) {
+         gap: 10px;
+      }
+
+      &-circle {
+         position: relative;
+
+         &__svg {
+            width: 148px;
+            height: 148px;  
+            fill: none;
+            stroke-width: 6px;
+            
+            &-progress {
+               transform-origin: center;
+               transform: rotate(-90deg);
+
+               &_yellow {
+                  stroke: #F89828;
+               }
+   
+               &_red {
+                  stroke: #F52F6E;
+               }
+   
+               &_blue {
+                  stroke: #5A87FC;
+               }
+   
+               &_green {
+                  stroke: #03CEA4;
+               }
+
+               &-bg {
+                  &_yellow {
+                     stroke: rgba(248, 152, 40, 30%);
+                  }
+      
+                  &_red {
+                     stroke: rgba(245, 47, 110, 30%);
+                  }
+      
+                  &_blue {
+                     stroke: rgba(90, 135, 252, 30%);
+                  }
+      
+                  &_green {
+                     stroke: rgba(3, 206, 164, 30%);
+                  }
+               }
+            }            
+         }
+
+         &__text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 32px;
+            font-weight: 900;
+         }
+      }
+
+      &-text {
+
+      }
+   }
+}

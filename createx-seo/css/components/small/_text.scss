@@ -1,0 +1,38 @@
+.text {
+   &_lead { 
+      font-size: 20px;
+      color: $storm-gray;
+   }
+
+   &_base {
+      font-size: 16px;
+      color: $mako;
+      line-height: 160%;
+   }   
+
+   &_small {
+      font-size: 14px;
+      color: $storm-gray;
+      line-height: 150%;
+   }
+
+   &_regular {
+      font-weight: 400;
+   }
+
+   &_bold {
+      font-weight: 700;
+   }
+
+   &_white {
+      color: $white;
+   }
+
+   &_ebony-gray {
+      color: $ebony-gray;
+   }
+
+   &_storm-gray {
+      color: $storm-gray;
+   }
+}

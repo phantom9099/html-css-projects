@@ -1,0 +1,20 @@
+.play-video {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 52px;
+   height: 52px;
+   border-radius: 100%;
+   background-color: $cornflower-blue;
+   transition: box-shadow .3s ease-in-out;
+
+   &:hover {
+      box-shadow: 0 0 0 20px rgba(119, 114, 241, 16%);
+   }
+
+   &__img {
+      fill: $white;
+      width: 16px;
+      height: 16px;
+   }
+}

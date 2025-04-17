@@ -1,0 +1,132 @@
+.nav {
+   &__list {
+      display: flex;
+
+      @media (max-width: 768px) {
+         flex-direction: column;
+         align-items: flex-start;
+      }
+   }
+
+   &__item {
+      &:not(:last-child) {
+         @media (min-width: 768px) {
+            margin: 0 32px 0 0;
+
+            @media (max-width: 920px) {
+               margin: 0 20px 0 0;
+            }
+         }
+
+         @media (max-width: 768px) {
+            margin: 0 0 20px 0;
+         }
+      }
+
+      &-dropdown {
+         position: relative;         
+
+         @media (min-width: 768px) {
+            margin: 0 32px 0 0;
+
+            @media (max-width: 920px) {
+               margin: 0 20px 0 0;
+            }
+         }
+
+         @media (max-width: 768px) {
+            margin: 0 0 8px 0;
+         }
+      }
+   }
+
+   &__link {
+      position: relative;
+      font-weight: 700;
+      font-size: 16px;
+      color: $dusty-gray;
+      transition: color .3s ease-in-out;
+
+      &:hover {
+         color: $white;
+
+         & .nav__link-img {
+            stroke: $white;
+         }
+      }
+
+      &::before {
+         transform-origin: left;
+      }
+
+      &::after {
+         transform-origin: right;
+      }
+
+      &::before,        
+      &::after {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 2px;
+         right: 0;
+         bottom: -4px;
+         background-color: $dusty-gray;
+         transform: scaleX(0); 
+         transition: transform .5s ease-in-out, background-color .5s ease-in-out;        
+      }
+
+      &:hover::before, 
+      &:hover::after {
+         transform: scaleX(1);
+         background-color: $white;
+      }
+      
+      &-img {
+         width: 10px;
+         height: 10px;
+         stroke: $dusty-gray;
+         transition: stroke .3s ease-in-out, transform .3s ease-in-out;
+
+         &_rotate {
+            transform: rotate(180deg);
+            stroke: $white;
+         }
+      }
+
+      &_dropdown {
+         cursor: pointer;
+
+         &-active.nav__link::before,
+         &-active.nav__link::after {
+            transform: scaleX(1);
+            background-color: $white;            
+         }
+
+         &-active.nav__link {
+            color: $white;
+         }         
+      }
+   }
+
+   &.active {
+      transform: translateX(0);
+   }
+
+   @media (max-width: 768px) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      backdrop-filter: blur(30px);
+      width: 60%;
+      height: 100vh;
+      padding: 40px;
+      transform: translateX(-100%);
+      transition: transform .3s ease-in-out;
+      overflow-y: scroll;
+   }
+
+   @media (max-width: 425px) {
+      width: 100vw;
+   }
+}

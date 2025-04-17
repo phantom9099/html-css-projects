@@ -1,0 +1,35 @@
+.tabs {
+   &__nav {
+      display: flex;
+
+      &-btn {
+         background-color: rgb(255, 45, 45);
+         padding: 10px;
+         color: white;
+         transition: background-color .3s ease-in-out;
+
+         // &:hover, &:focus {
+         //    background-color: rgb(148, 26, 26);
+         // }
+
+         // &.active {
+         //    background-color: rgb(148, 26, 26);
+         // }
+      }
+   }
+
+   &__content {
+      max-width: 600px;      
+   }
+
+   &__item {
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      display: none;
+
+      &.active {
+         display: block;
+      }
+   }
+}
